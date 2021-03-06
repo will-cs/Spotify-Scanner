@@ -39,7 +39,7 @@ new Vue({
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-            }).then(data => data.json()).then(console.log);
+            }).then(console.log).catch(console.error);
         }
     }
 })
