@@ -17,7 +17,7 @@ new Vue({
         this.code = urlParams.get('code');
         console.log('Code', this.code);
 
-        this.codeVerifier = window.localStorage.getItem('codeVerifier');
+        this.codeVerifier = getCookie('codeVerifier');
         console.log('Verifier', this.codeVerifier);
         console.log('Redirect', this.redirectURI);
 

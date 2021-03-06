@@ -10,7 +10,7 @@ async function PKCE(clientId, redirectURI) {
     }
 
     // Store code verifier for token generation
-    window.localStorage.setItem('codeVerifier', codeVerifier);
+    setCookie('codeVerifier', codeVerifier, 1);
 
     // Encode string
     const encoder = new TextEncoder();
