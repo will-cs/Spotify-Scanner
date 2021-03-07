@@ -34,8 +34,7 @@ new Vue({
             let endpoint = new URL('https://accounts.spotify.com/api/token');
             endpoint.search = new URLSearchParams(tokenParams);
 
-            fetch(endpoint.toString(), {
-                method: 'POST',
+            axios.post(endpoint.toString(), {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
